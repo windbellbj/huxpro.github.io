@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      "SpringCloud教程第1篇：Eureka"
-subtitle:   " \"SpringCloud教程第1篇：Eureka\""
 date:       2019-04-11
 author:     "Lixinlong"
 header-img: "img/post-bg-2019.jpg"
