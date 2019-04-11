@@ -32,7 +32,7 @@ spring cloud 为开发人员提供了快速构建分布式系统的一些工具�
 
 下一步->选择cloud discovery->eureka server ,然后一直下一步就行了。
 
-![image](https://upload-images.jianshu.io/upload_images/2279594-3addb73d569a58e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+![image](https://upload-images.jianshu.io/upload_images/2279594-3addb73d569a58e6.png)
 
 创建完后的工程的pom.xml文件如下：
 ```
@@ -144,7 +144,7 @@ eureka:
 
 2.5 eureka server 是有界面的，启动工程,打开浏览器访问： http://localhost:8761 ,界面如下：
 
-![image](https://upload-images.jianshu.io/upload_images/2279594-8c954deeb3a3a01c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+![image](https://upload-images.jianshu.io/upload_images/2279594-8c954deeb3a3a01c.png)
 
 No application available 没有服务被发现 ……^_^ 因为没有注册服务当然不可能有服务被发现了。
 
@@ -268,17 +268,17 @@ spring:
 
 需要指明spring.application.name,这个很重要，这在以后的服务与服务之间相互调用一般都是根据这个name 。 启动工程，打开http://localhost:8761 ，即eureka server 的网址：
 
-![image](https://upload-images.jianshu.io/upload_images/2279594-d830f93f1e56f6a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+![image](https://upload-images.jianshu.io/upload_images/2279594-d830f93f1e56f6a2.png)
 
 你会发现一个服务已经注册在服务中了，服务名为SERVICE-HI ,端口为7862
 
 这时打开 http://localhost:8762/hi?name=forezp ，你会在浏览器上看到 :
-
+```
 hi forezp,i am from port:8762
-
+```
 源码下载：https://github.com/forezp/SpringCloudLearning/tree/master/chapter1
 
 # 四、参考资料
-springcloud eureka server 官方文档
+[springcloud eureka server 官方文档](http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-eureka-server)
 
-springcloud eureka client 官方文档
+[springcloud eureka client 官方文档](http://projects.spring.io/spring-cloud/spring-cloud.html#_service_discovery_eureka_clients)
