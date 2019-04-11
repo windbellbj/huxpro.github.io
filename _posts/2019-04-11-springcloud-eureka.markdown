@@ -233,7 +233,7 @@ No application available 没有服务被发现 ……^_^ 因为没有注册服�
 ```
 
 通过注解@EnableEurekaClient 表明自己是一个eurekaclient.
-
+```
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
@@ -251,7 +251,7 @@ public class ServiceHiApplication {
 	}
 
 }
-
+```
 
 仅仅@EnableEurekaClient是不够的，还需要在配置文件中注明自己的服务注册中心的地址，application.yml配置文件如下：
 ```
