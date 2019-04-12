@@ -4,7 +4,7 @@ title:      "SpringCloud教程第2篇：Ribbon"
 date:       2019-04-12
 author:     "Lixinlong"
 header-img: "img/post-bg-2019.jpg"
-catalog: trueribbon
+catalog: true
 tags:
     - SpringCloud
 ---
