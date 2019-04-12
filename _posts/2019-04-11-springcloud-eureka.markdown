@@ -12,15 +12,22 @@ tags:
 > “Let's come together. ”
 
 
-# 一、spring cloud简介
-spring cloud 为开发人员提供了快速构建分布式系统的一些工具，包括配置管理、服务发现、断路器、路由、微代理、事件总线、全局锁、决策竞选、分布式会话等等。它运行环境简单，可以在开发人员的电脑上跑。另外说明spring cloud是基于springboot的，所以需要开发中对springboot有一定的了解，如果不了解的话可以看这篇文章：2小时学会springboot。另外对于“微服务架构” 不了解的话，可以通过搜索引擎搜索“微服务架构”了解下。
 
+# 一、spring cloud简介
+springCloud是基于SpringBoot的一整套实现微服务的框架。他提供了微服务开发所需的配置管理、服务发现、断路器、智能路由、微代理、控制总线、全局锁、决策竞选、分布式会话和集群状态管理等组件。最重要的是，跟spring boot框架一起使用的话，会让你开发微服务架构的云服务非常好的方便。
+
+SpringBoot旨在简化创建产品级的 Spring 应用和服务，简化了配置文件，使用嵌入式web服务器，含有诸多开箱即用微服务功能
+
+ #### 相关组件架构图
+ 
+ ![image](http://img.ccblog.cn/img/20170118/181.jpg)
+ 
 # 二、创建服务注册中心
 在这里，我们需要用的的组件上Spring Cloud Netflix的Eureka ,eureka是一个服务注册和发现模块。
 
 ## 2.1 首先创建一个maven主工程。
 
-## 2.2 然后创建2个model工程: ##
+## 2.2 然后创建2个model工程: 
 一个model工程作为服务注册中心，即Eureka Server,另一个作为Eureka Client。
 
 下面以创建server为例子，详细说明创建过程：
@@ -112,7 +119,7 @@ spring cloud 为开发人员提供了快速构建分布式系统的一些工具�
 </project>
 ```
 
-## 2.3 启动一个服务注册中心 ##
+## 2.3 启动一个服务注册中心 
 只需要一个注解@EnableEurekaServer，这个注解需要在springboot工程的启动application类上加：
 ```
 @EnableEurekaServer
@@ -124,7 +131,7 @@ public class EurekaserverApplication {
 	}
 }
 ```
-## 2.4 ##
+## 2.4 
 eureka是一个高可用的组件，它没有后端缓存，每一个实例注册之后需要向注册中心发送心跳（因此可以在内存中完成），在默认情况下erureka server也是一个eureka client ,必须要指定一个 server。eureka server的配置文件appication.yml：
 ```
 server:
@@ -147,7 +154,7 @@ eureka:
 
 No application available 没有服务被发现 ……^_^ 因为没有注册服务当然不可能有服务被发现了。
 
-# 三、创建一个服务提供者 (eureka client) #
+# 三、创建一个服务提供者 (eureka client) 
 当client向server注册时，它会提供一些元数据，例如主机和端口，URL，主页等。Eureka server 从每个client实例接收心跳消息。 如果心跳超时，则通常将该实例从注册server中删除。
 
 创建过程同server类似,创建完pom.xml如下：

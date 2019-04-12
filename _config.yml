@@ -133,3 +133,7 @@ page-mathjax: false
 #        href: "http://xieminis.me/"
 #    }
 #]
+deploy:
+  repository: https://github.com/windbellbj/windbellbj.github.io
+  type: git
+  branch: master
