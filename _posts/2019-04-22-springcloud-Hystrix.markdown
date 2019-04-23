@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "SpringCloud教程第4篇：Hystrix"
-date:       2019-04-23
+date:       2019-04-22
 author:     "Lixinlong"
 header-img: "img/post-bg-2019.jpg"
 catalog: true
