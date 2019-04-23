@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "SpringCloud教程第3篇：Feign"
+title:      "SpringCloud教程第4篇：Hystrix"
 date:       2019-04-23
 author:     "Lixinlong"
 header-img: "img/post-bg-2019.jpg"
